@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dt, dd {
+            margin-bottom: 10px;
+        }
+        input, select {
+            width: 150px;
+        }
+    </style>
+    <script>
+        function CountryChange(){
+             var country = document.getElementById("lstCountries").value;
+             var txtMobile = document.getElementById("txtMobile");
+             var pic=document.getElementById('imgHolder');
+             switch(country)
+             {
+                case "India":
+                    txtMobile.placeholder = "eg: +91 and 10 digits";
+                    pic.src="../images/india-flag.jpeg"
+                    break;
+                case "US":
+                    txtMobile.placeholder = "eg: +(1)(530) 456-5663";
+                    pic.src="../images/us-flag.jpeg"
+                    break;
+                case "UK":
+                    txtMobile.placeholder="eg: +44 1XX YYYY YYY"
+                    pic.src="../images/flag-uk.jpeg";
+                    break;
+             }
+        }
+        function verifyMobile(){
+            var country = document.getElementById("lstCountries").value;
+            var txtMobile = document.getElementById("txtMobile").value;
+            console.log(country)
+            console.log(txtMobile)
+            switch(country)
+             {
+                case "India":
+                var pattern = /^\+91\s\d{10}$/;  // Correct regex for India
+                    if(pattern.test(txtMobile)) {
+                        document.getElementById('lblDetails').innerHTML = 'User Entered Correct format';
+                    } else {
+                        document.getElementById('lblDetails').innerHTML = 'User Entered wrong format';
+                    }
+                    break;
+                case "US":
+                    var uspattern=/^\+\(1\)\s\(\d{3}\)\s\d{3}-\d{4}/
+                    if(uspattern.test(txtMobile)) {
+                        document.getElementById('lblDetails').innerHTML = 'User Entered Correct format';
+                    } else {
+                        document.getElementById('lblDetails').innerHTML = 'User Entered wrong format';
+                    }
+                    break;
+                case "UK":
+                    
+                    var ukpattern=/^\+44\s\d{3}\s\d{4}\s\d{3}/
+                    
+                    if(ukpattern.test(txtMobile)) {
+                        document.getElementById('lblDetails').innerHTML = 'User Entered Correct format';
+                    } else {
+                        document.getElementById('lblDetails').innerHTML = 'User Entered wrong format';
+                    }
+                    break;
+             }
+
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify Your Mobile</legend>
+        <dl>
+            <dt> <img width="20" border="1" align="left" height="20" style="border-radius: 20px;" id="imgHolder"> Your Country</dt>
+            <dd>
+                <select id="lstCountries" onchange="CountryChange()">
+                    <option>Select Your Country</option>
+                    <option>India</option>
+                    <option>US</option>
+                    <option>UK</option>
+                </select>
+               
+            </dd>
+            <dt>Your Mobile Number</dt>
+            <dd>
+                <input type="text"  id="txtMobile">
+            </dd>
+        </dl>
+        <button onclick="verifyMobile()">Verify</button>
+        <p id="lblDetails"></p>
+    </fieldset>
+</body>
+</html>

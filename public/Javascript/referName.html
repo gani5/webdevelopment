@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function bodyLoad()
+        {
+            poster.src="../images/men-fashion.jpg";
+            poster.width="100"
+            poster.height="100"
+            document.getElementById('btnLogin').innerHTML="Login"
+            document.getElementById('btnRegister').innerHTML='Register'
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">  
+    <img src="" alt="" name="poster">
+    <form action="" name="frmLogin">
+        <label for="">User Name</label>
+        <input type="text">
+        <label for="">Password</label>
+        <input type="password">
+        <button id="btnLogin"></button>
+    </form>
+    <form action="" name="frmRegister">
+        <label for="">User Name</label>
+        <input type="text">
+        <label for="">Email</label>
+        <input type="email" name="" id="">
+        <label for="">Password</label>
+        <input type="password">
+        <button id="btnRegister"></button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script>
+    var values=[10,"A",true]
+
+    document.write(values.toString(",")+"<br>")
+    document.write(values.join("&"))
+    document.write("<br>")
+    values.map(function(item,index){
+        document.write(`${index} - ${item} <br>`)
+    })
+
+    values.forEach((item,index)=>{
+        document.write(`${index} - ${item} <br>`)
+    })
+
+    var categories = ["All", "Electronics", "Fashion", "Footwear"];
+
+     categories.map(function(value, index){
+          document.write(`[${index}][${typeof index}]:${value}<br>`);
+     });
+
+     categories.forEach(function(value, index){
+          document.write(`[${index}][${typeof index}]:${value}<br>`);
+     })
+</script>

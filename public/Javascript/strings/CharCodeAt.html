@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharCodeAt</title>
+    <script>
+        function verifyName(){
+            var uname=document.getElementById('txtName').value;
+            var lblName=document.getElementById('lblName');
+            if(uname.charCodeAt(0)>=65 && uname.charCodeAt(0)<=90)
+            {
+                lblName.innerHTML=""
+            }
+            else{
+                lblName.innerHTML="Please Enter First Letter as Capital".fontcolor("red").fontsize(2)
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Username</dt>
+        <dd><input type="text" onblur="verifyName()" id="txtName"></dd>
+        <dd id="lblName"></dd>
+    </dl>
+</body>
+</html>

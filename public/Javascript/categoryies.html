@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var categories=['Select Category','Electronics','Footwear']
+        var electronics=['Select Electronics','TV','Fan','AC']
+        var footwear=['Select Footwear','sandals','flipflops','shoes']
+        var products=[]
+        function loadCategories(){
+            categories.map(function(category){
+                var option=document.createElement('option');
+                option.text=category;
+                option.value=category;
+                document.getElementById('lstCategories').appendChild(option);
+            })
+        }
+        function categoryChange()
+        {
+            var val=document.getElementById('lstCategories').value;
+            switch(val)
+            {
+                case 'Electronics':
+                    products=[...electronics];
+                    break;
+                case 'Footwear':
+                    products=[...footwear]
+                    break;
+            }
+
+            products.map(function(product){
+                var option=document.createElement('option');
+                option.text=product;
+                option.value=product;
+                document.getElementById('lstProducts').appendChild(option);
+            })
+        }
+        function bodyLoad(){
+            loadCategories();
+
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <dl>
+        <dt>Select Category</dt>
+        <dd>
+            <select name="" id="lstCategories" onchange="categoryChange()"></select>
+        </dd>
+        <dt>Select Product</dt>
+        <dd>
+            <select name="" id="lstProducts"></select>
+        </dd>
+    </dl>
+</body>
+</html>

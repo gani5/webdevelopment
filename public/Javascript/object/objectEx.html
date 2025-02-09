@@ -1,0 +1,20 @@
+<script>
+    var Tv={
+        Name:"Samsung TV",
+        Price:"45000.66",
+        Stock:true,
+        cities:"Delhi",
+        Print:function(){
+            document.write(this.Name+"<br>"+this.Price+"<br>"+this.Stock+"<br>"+this.cities)
+        }
+    }
+
+    Tv.Print()
+    document.write("<hr>")
+    Tv.Name="Alexa Tv";
+    Tv.Stock=false;
+    Tv.cities="hyderbad"
+    Tv.Print()
+
+
+</script>

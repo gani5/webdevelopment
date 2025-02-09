@@ -1,0 +1,12 @@
+<script>
+    function delayedMessage(message, delay,callback)
+    {
+        message.map((item)=>{
+            setTimeout(()=>{
+                callback(item)
+            },delay)
+        })
+    }
+
+    delayedMessage(["hello","hi","Welcome","ganesh"],2000,console.log)
+</script>

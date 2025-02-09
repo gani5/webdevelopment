@@ -1,0 +1,39 @@
+<script>
+    var Tv={
+        Name:"Samsung",
+        Price:45000.66,
+        Rating:4.5,
+        Cities:"Delhi"
+    }
+    for(var key in Tv){
+        document.write(`${key}-${Tv[key]} <br>`)
+    }
+
+    document.write("<hr>")
+
+    Object.keys(Tv).map(function(key){
+        document.write(`${key}-${Tv[key]} <br>`)
+    })
+
+    document.write("<hr>")
+
+    if("Rting" in Tv)
+    {
+        document.write("Rating found in TV")
+    }
+    else{
+        document.write("Rating not found in TV")
+    }
+
+    // Adding new key in Existing object
+     
+    Tv.Qty=1;
+    if("Qty" in Tv)
+    {
+        document.write("Qty found in TV")
+    }
+    else{
+        document.write("Qty not found in TV")
+    }
+
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Stock</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function stockChange(){
+            var optStock=document.getElementById("optStock");
+            var lblStock=document.getElementById("lblStock");
+
+            lblStock.innerHTML=optStock.checked?"Available":"Out of Stock";
+        }
+
+        function sortClick(){
+            var btnSort=document.getElementById("btnSort");
+            btnSort.className=(btnSort.className=="bi bi-sort-alpha-down")?"bi bi-sort-alpha-up":"bi bi-sort-alpha-down";
+
+        }
+        function ViewClick(){
+            var txtInput=document.getElementById("txtInput").value;
+            var btnView=document.getElementById("btnView");
+            txtInput.type=(txtInput.type="password")?"text":"password"
+            btnView.className= (btnView.className=="bi bi-eye-slash")?"bi bi-eye":"bi bi-eye-slash";
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Stock</dt>
+        <dd>
+            <input type="checkbox" id="optStock" onchange="stockChange()" >
+            <label id="lblStock">Out of Stock</label>
+        </dd>
+        <dt>Sort</dt>
+        <dd><button id="btnSort" onclick="sortClick()" class="bi bi-sort-alpha-down"></button></dd>
+        <dt>Password</dt>
+        <dd>
+            <input type="password" id="txtInput">
+            <button onclick="ViewClick()" id="btnView" class="bi bi-eye-slash"></button>
+        </dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>USER NAME</dt>
+            <dd><input type="text" name="username"></dd>
+            <dt>Password</dt>
+            <dd> <input type="password" name="pwd" ></dd>
+            <dt>OTP</dt>
+            <dd><input type="otp" minlength="4" maxlength="6"></dd>
+            <dt>Course</dt>
+            <dd>
+                <input type="text" name="cr" list="courses">
+                <datalist id="courses">
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JS</option>
+                    <option>Java</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JS</option>
+                    <option>Java</option>
+                </datalist>
+            </dd>
+            
+        </dl>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyLoad(){
+            var opt1=document.createElement("option")
+            var opt2=document.createElement("option")
+            opt1.text="Delhi"
+            opt2.text="Hyd"
+            document.querySelector("select").appendChild(opt1)
+            document.querySelector("select").appendChild(opt2)
+            var pic=document.createElement("img")
+            pic.src="./images/ar rahman.jpg"
+            pic.height='200'
+            pic.width='200'
+            
+            document.querySelector("main").appendChild(pic)
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <select></select>
+    <main></main>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Netflix</title>
+    <style>
+        body{
+            height: 100vh;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main-container{
+            background-color: rgba(0,0,0,0.7);
+            height: 102vh;
+            margin-top: -10px;
+            margin-left: -10px;
+            width: 101.45%;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            color: white;
+        }
+        span{
+            margin-left: 15px;
+        }
+        .brand-logo{
+            font-size: 50px;
+            font-weight: bolder;
+            margin-left: 40px;
+            color: red;
+        }
+        .bi-translate{
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .right-panel{
+            margin-right: 40px;
+        }
+        .btn-signin{
+            border: 1px solid red;
+            padding: 5px;
+            background-color: red;
+            border-radius: 5px;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            
+        }
+        section{
+            color: white;
+            margin-top: 100px;
+            text-align: center;
+
+        }
+        .section-title{
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .section-subtitle{
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .main-title{
+            margin-bottom: 20px;
+        }
+        .email{
+            border: 1px solid gray;
+            color: gray;
+            padding: 1%;
+            display: inline-block;
+            width: 300px;
+            text-align: start;
+        }
+        .get-started{
+            border: 1px solid red;
+            background-color: red;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body background="./images/Netflix-Banner.jpg">
+    <div class="main-container" >
+      <header>
+        <div class="brand-logo">
+            <span>Netflix</span>
+        </div>
+        <div class="right-panel">
+            <span class="bi bi-translate">English<span class="bi bi-chevron-down"></span></span>
+            <span class="btn-signin">Sign In</span>
+        </div>
+     </header>  
+     <section>
+        <div class="section-title">
+            Unlimited movies, TV <br>shows and more
+        </div>
+        <div class="section-subtitle">
+            Starts at $6.99. Cancel at any time.  
+        </div>
+        <main>
+            <div class="main-title">Ready to watch? Enter your email to create or restart your membership.</div>
+            <span class="email">email address </span>
+            <span class="get-started">Get Started <span class="bi bi-chevron-right"></span></span>
+        </main>
+     </section>
+    </div>
+    
+</body>
+</html>

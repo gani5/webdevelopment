@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        var likes=0;
+        function likesClick(){
+            
+            likes++;
+            document.getElementById('lblLikes').innerHTML=likes;
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <img src="../../../public/images/shopping-women.jpg" alt="" width="200px" height="300px">
+    <button onclick="likesClick()" class="btn btn-primary bi bi-hand-thumbs-up"><span id="lblLikes"> 0 </span> Likes</button>
+</body>
+</html>

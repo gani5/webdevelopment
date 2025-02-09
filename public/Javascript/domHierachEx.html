@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyLoad()
+        {
+            
+            document.querySelector("#btn-login").value="Login"
+            document.querySelector(".btn-register").value="Register"
+
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    
+    <h2 name="heading"></h2>
+    <div>
+        <form name="frmLogin">
+            <h3>Login</h3>
+            <label for="">Username</label>
+            <input type="text">
+            <input type="button" id="btn-login">
+        </form>
+    </div>
+    <div>
+        <form name="frmRegister">
+            <h3>Register</h3>
+            <label for="">Username</label>
+            <input type="text">
+            <label for="">Email</label>
+            <input type="email" name="" id="">
+            <label for="">Password</label>
+            <input type="password" name="" id="">
+            <input type="button" class="btn-register">
+        </form>
+    </div>
+    
+</body>
+</html>

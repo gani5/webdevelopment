@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        nav img {
+            width: 100px;
+            height: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        ul {
+            list-style: none;
+        }
+        .card {
+            width: 300px;
+            height: 200px;
+            box-shadow: 2px 2px 2px black;
+            padding: 40px;
+            margin: 20px;
+            font-family: Arial;
+            text-align: center;
+        }
+        .card:target {
+            background-color: yellow;
+            color:black;
+            border-radius: 200px;
+        }
+        .card-header {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .card-footer {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        main {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#pritam"><img src="./images/pritam.JPG"></a>
+        </div>
+        <div>
+            <a href="#ar"><img src="./images/rah.JPG"></a>
+        </div>
+        <div>
+            <a href="#arjit"><img src="./images/argit.JPG"></a>
+        </div>
+    </nav>
+    <main>
+        <div class="card" id="pritam">
+            <div class="card-header">
+                <div>Pritham Playlist</div>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <span class="bi bi-play-circle"> Play All</span>
+            </div>
+        </div>
+
+
+        <div class="card" id="ar">
+            <div class="card-header">
+                <div>A.R Rehman Playlist</div>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <span class="bi bi-play-circle"> Play All</span>
+            </div>
+        </div>
+
+        <div class="card" id="arjit">
+            <div class="card-header">
+                <div>Arjit Playlist</div>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li class="bi bi-play">Song-1</li>
+                    <li class="bi bi-play">Song-2</li>
+                    <li class="bi bi-play">Song-3</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <span class="bi bi-play-circle"> Play All</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

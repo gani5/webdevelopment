@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container-fluid">
+    <h2>Product Details</h2>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a href="#basic" data-bs-toggle="tab" class="nav-link active"><span class="nav-text">Basic Details</span></a>
+        </li>
+        <li class="nav-item"> 
+            <a href="#preview" data-bs-toggle="tab" class="nav-link"><span class="nav-text">Preview</span></a>
+        </li>
+        <li class="nav-item"> 
+            <a href="#features" data-bs-toggle="tab" class="nav-link"><span class="nav-text">Features</span></a>
+        </li>
+        <li class="nav-item"> 
+            <a href="#ratings" data-bs-toggle="tab" class="nav-link"><span class="nav-text"> Ratings & Reviews</span></a>
+        </li>
+       
+    </ul>
+
+    <div class="tab-content mt-4">
+        <div class="tab-pane" id="basic">
+            <h2>iPhone 15 (Black 128 GB)</h2>
+            <div class="fs-4">&#8377; 54,000/- </div>
+        </div>
+        <div class="tab-pane p-4" id="preview">
+            <img src="../../public/images/preetham.jpg" alt="">
+        </div>
+        <div class="tab-pane p-4" id="features">
+            <h3>Features</h3>
+        <ul>
+            <li>128 GB ROM</li>
+            <li>8 GB RAM</li>
+            <li>18 pixels Camera</li>
+        </ul>
+        </div>
+        <div class="tab-pane" id="ratings">
+            <h3>Ratings</h3>
+            <span class="bi bi-star-fill"></span> 4.5
+        </div>
+    </div>
+</body>
+</html>

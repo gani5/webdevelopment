@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        input+span {
+            display: none;
+        }
+        input:required+span {
+            display: inline;
+            color:red;
+            font-size: 12px;
+        }
+        input:required {
+            border:1px solid red;
+        }
+        input {
+            outline: none;
+        }
+        input:valid+span {
+            display: none;
+        }
+        input:invalid+span {
+            display: inline;
+        }
+        input:valid {
+            border:1px solid green;
+        }
+        input:invalid {
+            border:1px solid red;
+        }
+        .age:in-range~div {
+            display: none;
+        }
+        .age:out-of-range~div {
+            display: block;
+            color:red;
+            font-size: 12px;
+        }
+        .mobile:invalid+div {
+            display: block;
+            color:red;
+            font-size: 12px;
+        }
+        .mobile:valid+div {
+            display: none;
+        }
+    </style>
+   
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input required type="text"> <span>*</span> </dd>
+            <dt>Password</dt>
+            <dd><input required type="password"> <span>*</span></dd>
+            <dt>Email</dt>
+            <dd><input type="email"> <span>*</span></dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" class="mobile" pattern="\+91\s\d{10}">
+                <div>Invalid Mobile : +91 10 digits required</div>
+            </dd>
+            <dt>Age</dt>
+            <dd><input required  min="15" max="30" class="age" type="number" > <span>*</span>
+                <div>Age 15 to 30 only</div>
+            </dd>
+        </dl>
+        <button>Register</button>
+    </form>
+</body>
+</html>

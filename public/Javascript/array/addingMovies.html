@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script>
+        var movies=["Mufasa","pushpa 2","pokiri"];
+        function LoadMovies(){
+            document.getElementById("lstMovies").innerHTML="";
+            movies.map(movie=>{
+                var opt=document.createElement("option")
+                opt.value=movie;
+                opt.text=movie;
+                document.querySelector("select").appendChild(opt)
+            })
+            document.getElementById("lblCount").innerHTML = `Total No of Movies : ${movies.length}`;}
+
+        function AddClick(){
+            var movie=document.getElementById("txtMovie").value;
+            movies.unshift(movie)
+            LoadMovies()
+        }
+        function sortAsc(){
+            movies.sort();
+            LoadMovies();
+        }
+
+        function sortDsc(){
+            movies.sort().reverse();
+            LoadMovies()
+        }
+
+        function ClearAll(){
+            movies.splice(0,movies.length);
+            LoadMovies()
+        }
+
+        function RemoveMovie(){
+            var movieName= document.getElementById("lstMovies").value;
+            var movieIndex=movies.indexOf(movieName);
+            var choice= confirm(`are you sure? \n Want to delte ${movieName}`)
+            if(choice==true)
+            {
+                movies.splice(movieIndex,1)
+                LoadMovies();
+            }  
+        }
+
+        function EditMovie(){
+            document.getElementById()
+        }
+       
+    </script>
+</head>
+<body class="container-fluid" onload="LoadMovies()">
+    <h3>Admin Dashboard</h3>
+    <div class="w-25">
+        <div class="input-group">
+            <input type="text" id="txtMovie" class="form-control" placeholder="Enter New Movie Name">
+            <button onclick="AddClick()" class="btn btn-primary bi bi-film"> Add </button>
+        </div>
+        <div class="my-3">
+            <div class="my-2">
+                <button onclick="sortAsc()" class="btn btn-warning bi bi-sort-alpha-up"></button>
+                <button onclick="sortDsc()" class="btn btn-warning bi bi-sort-alpha-down"></button>
+            </div>
+            <select class="form-select" size="3" id="lstMovies">
+
+            </select>
+            <div class="my-2">
+                <span id="lblCount"></span>
+            </div>
+            <div class="my-2 btn-group">
+                <button onclick="ClearAll()" class="btn btn-danger bi bi-trash-fill" >Clear All</button>
+                <button onclick="RemoveMovie()" class="btn btn-outline-danger bi bi-trash">Remove Movie</button>
+                <button onclick="EditMovie()" class="btn btn-warning bi bi-pen-fill" data-bs-target="#edit" data-bs-toggle="modal">Edit Movie</button>
+                <div class="modal fade" id="edit">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Edit Movie</h3>
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" class="form-control" id="txtEditMovie">
+                            </div>
+                            <div class="modal-footer">
+                                <button onclick="saveClick()" data-bs-dismiss="modal" class="btn btn-success">Save</button>
+                                <button data-bs-dismiss="modal" class="btn btn-danger">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

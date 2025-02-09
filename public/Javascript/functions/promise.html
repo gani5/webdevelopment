@@ -1,0 +1,29 @@
+<script>
+    var fetchData=new Promise(function(resolve,reject){
+    {
+        var url=prompt("enter url")
+        if(url=="https://fakestoreapi.com&quot"){
+            resolve({Name:"TV",Price:"30000"},{Name:"Mobile",Price:"20000"})
+        }
+        else{
+            reject("Invalid url, Please enter Url")
+        }
+    }})
+
+    fetchData
+    .then(function(response){
+        console.log(response)
+        var date=new Date();
+        console.log(date.toLocaleDateString());
+    })
+    .then(function(){
+        var date=new Date();
+        console.log(date.toLocaleDateString());
+    })
+    .catch(function(error){
+        console.log(error)
+    })
+    .finally(function(){
+        console.log("Fetched data successfully")
+    })
+</script>

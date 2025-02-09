@@ -1,0 +1,15 @@
+<script>
+    var sales=[50000,30000,40000,20000]
+    document.write(`using slice method <br>`)
+    document.write(sales.slice(1) +"<br>")
+    document.write(`using find method  find first value greater than 25000 <br>`)
+    var res=sales.find(function(val){
+        return val>25000;
+    })
+    document.write(res +"<br>")
+    document.write(`using filter method find values greaterg than 35000 <br>`)
+    var result=sales.filter((val)=>{
+        return val>35000
+    })
+    document.write(result +"<br>")
+</script>

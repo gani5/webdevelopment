@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyName(){
+
+            var uname=document.getElementById("txtName").value;
+            var btn=document.querySelector('button')
+            if(uname.length==0){
+                btn.disabled=true;
+            }
+            else{
+                btn.disabled=false;
+            }
+        }
+
+        function checkImgPreview(){
+            var chkPreview=document.getElementById("chkPreview");
+            var imgPreview=document.getElementById("imgPreview")
+             if(chkPreview.checked==true)
+             {
+                imgPreview.style.display="block"
+             }
+             else{
+                imgPreview.style.display="none"
+             }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Username</dt>
+        <dd><input type="text" onkeyup="verifyName()" id="txtName"></dd>
+        <dt><input type="checkbox" id="chkPreview" onchange="checkImgPreview()"> Show Preview</dt>
+        <dd id="imgPreview" style="display: none;">
+            <img width="200" height="200" src="../../../public/images/ar rahman.jpg">
+        </dd>
+        <button disabled>Submit</button>
+    </dl>
+</body>
+</html>

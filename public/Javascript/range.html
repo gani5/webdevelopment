@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findRange(min,max)
+        {
+            let val=Number(document.getElementById('ipVal').value);
+            // let min=Number(document.getElementById('ipVal').min);
+            // let max=Number(document.getElementById('ipVal').max);
+            console.log(min,max)
+            console.log(val)
+            if(val>=min && val<=max){
+                document.getElementById('rangeTxt').innerHTML='Value is in range';
+            }
+        else{
+            document.getElementById('rangeTxt').innerHTML='Value is out of range';
+        }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label for="">Enter Number</label>
+        <input type="text" name="" id="ipVal" min="1" max="100" onblur="findRange(min,max)">
+        <h2 id="rangeTxt"></h2>
+    </div>
+</body>
+</html>

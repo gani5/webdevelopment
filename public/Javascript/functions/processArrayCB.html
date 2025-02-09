@@ -1,0 +1,18 @@
+<script>
+    function processArray(arr,callback)
+    {
+        return arr.map(callback)
+    }
+
+    function square(num)
+    {
+        return num * num;
+    }
+
+    function doubles(num)
+    {
+        return 2*num;
+    }
+
+    console.log(processArray([2,4,5,6],doubles))
+</script>

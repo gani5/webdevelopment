@@ -1,0 +1,20 @@
+<script>
+    function fetchData(url,success,failure)
+    {
+        if(url=="https://fakestoreapi.com&quot"){
+            success({Name:"tv",Price:"30000"},{Name:"Mobile",Price:"20000"})
+        }
+        else{
+            failure("Invalid url- Please eneter valid url")
+        }
+    }
+
+    fetchData(prompt("Enter Url"), 
+    function(response){
+        console.log(response);
+    }, 
+    function(error){
+        document.write(error)
+    }
+    )
+</script>

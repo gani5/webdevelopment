@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyLoad()
+        {
+            console.warn("Warnig message")
+            console.error("error")
+            document.querySelector("p").outerHTML="<h1><b>Outer HTML</b></h1>";
+            document.querySelector("p").innerHTML="<b>Inner HTML</b>";
+        }
+        
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <p></p>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        body{
+            height: 100vh;
+        }
+    </style>
+    <script>
+        var user={
+            email:'ganesh123@gmail.com',
+            phn:'+91 9642661929',
+            pwd:'Ganesh@123'
+        }
+        var flag;
+        function checkUser()
+        {
+            var details=document.getElementById('lblInput').value;
+            if(user.email==details)
+            { 
+                flag=`User entered email is ${user.email}`;
+                document.getElementById('emailContainer').style.display='none';
+                document.getElementById('pwdContainer').style.display='block';
+            }
+            else if(user.phn==details)
+            {
+                flag=`user entered phn number is ${user.phn}`
+                document.getElementById('emailContainer').style.display='none';
+                document.getElementById('pwdContainer').style.display='block';
+            }
+            else{
+                flag=`User not found`
+            }
+        }
+        function checkPwd()
+        {
+            var pwd1=document.getElementById('lblPwd').value;
+            if(user.pwd==pwd1){
+                document.getElementById('emailContainer').style.display='none';
+                document.getElementById('pwdContainer').style.display='none'; 
+                document.write(flag)
+            }
+            else{
+                document.getElementById('pwdErr').innerHTML="Password is Wrong"
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center ">
+    <div class="form">
+        <div id="emailContainer">
+        <label for="" class="form-label">Email or Phone Number</label>
+        <div class="mt-2">
+            <input type="text" class="form-control" id="lblInput">
+        </div>
+        <div>
+            <button class="form-control bg-warning" onclick="checkUser()">Continue</button>
+        </div>
+        </div>
+        <div class="m-2" style="display: none;" id="pwdContainer">
+            <label for="" class="form-label">Password</label>
+            <div>
+                <input type="password" name="" id="lblPwd" class="form-control">
+                <p id="pwdErr" class="text-danger"></p>
+            </div>
+            <div><button class="form-control bg-warning" onclick="checkPwd()">Login</button></div>
+        </div>
+    </div>
+</body>
+</html>

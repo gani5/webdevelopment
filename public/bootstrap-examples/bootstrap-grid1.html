@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body class="bg-secondary p-4">
+    <div class="bg-light p-4">
+        <div class="row">
+            <div class="col">
+                <span>Amount you need</span>
+                <input type="text">
+            </div>
+            <div class="col">
+                <span>For</span> <input type="number" size="2"> <span>  Years</span>
+            </div>
+            <div class="col">
+                <span>Interest rate</span>
+                <input type="text">
+                <span> %</span>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col ">
+                <input type="range" class="w-100">
+                <span class="float-start">&#8377; 1000</span>
+                <span class="float-end">&#8377; 100000</span>
+            </div>
+            <div class="col ">
+                <input type="range" class="w-100">
+                <span class="float-start"> 2 Years</span>
+                <span class="float-end">10 Years</span>
+            </div>
+            <div class="col ">
+                <input type="range" class="w-100">
+                <span class="float-start">10.5%</span>
+                <span class="float-end">18.5%</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="bg-black text-light rounded-4  w-25 float-end fw-bold"> Calculate</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

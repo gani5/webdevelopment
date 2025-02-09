@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setEffects(){
+           color= document.getElementById('txtColor').value
+           fontsize=document.getElementById('sizeRange').value;
+           document.getElementById('msg').innerHTML="Sample Text".fontsize(fontsize).fontcolor(color).bold().italics();
+        }
+        function ColorChange()
+        {
+            setEffects()
+        }
+        function SizeChange(){
+            setEffects()
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <h3>Text Formatting</h3>
+        <dt>Font Color</dt>
+        <dd><input type="color" onchange="ColorChange()" id="txtColor"></dd>
+        <dt>Font Size</dt>
+        <dd><input type="range" onchange="SizeChange()" id="sizeRange" min="1" value="3" max="7"></dd>
+        <p id="msg"></p>
+    </dl>
+</body>
+</html>

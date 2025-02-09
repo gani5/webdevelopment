@@ -1,0 +1,66 @@
+Ex: ReadOnly, Disabled, Checked
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+         .UserName+div {
+            display: none;
+         }
+         .UserName:focus+div {
+            display: block;
+            color:red;
+            font-size: 13px;
+         }
+         .UserName:focus {
+            border:1px solid red;
+            box-shadow: 2px 2px 2px red;
+            outline: none;
+            border-radius: 5px;
+            padding: 5px;
+         }
+         textarea:read-only {
+            cursor: not-allowed;
+            background-color: lightgray;
+         }
+         
+         .terms+label {
+            color:red;
+         }
+         .terms:checked+label {
+            color:green;
+         }
+         
+    </style>
+   
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" class="UserName" placeholder="Name Min 4 Chars" value="John">
+                <div>User Name min 4 chars</div>
+            </dd>
+            <dt>Comments</dt>
+            <dd>
+                <textarea rows="4" readonly cols="40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum excepturi obcaecati, nulla maxime eum, incidunt libero impedit necessitatibus assumenda possimus sed porro atque laboriosam aut, dolor eligendi officia velit reiciendis.</textarea>
+            </dd>
+            <dt>Terms of Service</dt>
+            <dd>
+                <textarea rows="4" cols="40" disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quam assumenda earum possimus, provident porro ab autem cum laudantium repellendus quae facilis iure excepturi temporibus at beatae quis, iusto nihil? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore esse quasi a quidem consectetur impedit tenetur est. Commodi optio nulla repudiandae minus accusantium, incidunt ad non molestias debitis, ratione earum.</textarea>
+            </dd>
+            <dd>
+                <input type="checkbox" class="terms"> <label>I Accept</label>
+                <br><br>
+                <button disabled>Submit</button>
+            </dd>
+        </dl>
+       
+    </form>
+</body>
+</html>

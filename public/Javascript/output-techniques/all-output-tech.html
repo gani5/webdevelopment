@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick()
+        {
+            let value=confirm('delete Record! \n Are you Sure?')
+            if(value)
+        {
+            document.querySelector('p').innerHTML= '<h2>Recorde deleted Succesfull</h2>'
+        }
+        else{
+            document.querySelector('p').innerHTML='<h2 style="color:red">Recorde deleted Succesfull</h2>'
+        }
+        }
+    </script>
+</head>
+<body >
+    <button onclick="DeleteClick()">Delete</button>
+    <p></p>
+</body>
+</html>

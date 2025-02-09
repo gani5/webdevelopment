@@ -1,0 +1,16 @@
+<script>
+    var id=Symbol()
+    var Tv={
+        [id]:2,
+        Name:"Samsung",
+        Price:45000.66,
+        Rating:4.5,
+        Cities:"Delhi"
+    }
+
+    Object.keys(Tv).map(function(key){
+        document.write(`${key} <br>`)
+    })
+
+    document.write(Tv[id])
+</script>

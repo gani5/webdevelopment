@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>startswith</title>
+    <script>
+        function verifyName()
+        {
+            var uname=document.getElementById("txtName").value;
+            var lblName=document.getElementById("lblName");
+            if(uname.charCodeAt(0)>=65 && uname.charCodeAt(0)<=90){
+                lblName.innerHTML=""
+            }
+            else{
+                lblName.innerHTML="Please make first charcter as Capital".fontcolor("red").fontsize(3);
+            }
+        }
+
+        function verifyEmail(){
+            var email=document.getElementById("txtEmail").value;
+            var lblEmail=document.getElementById("lblEmail");
+
+            if(email.indexOf("@")==-1){
+                lblEmail.innerHTML="Please include @ in gmail".fontcolor("red")
+            }
+            else{
+                if(email.endsWith("@gmail.com")){
+                    lblEmail.innerHTML=""
+                }
+                else{
+                    lblEmail.innerHTML="Please use Gmail account only"
+                }
+            }
+        }
+
+        function verifyCard()
+        {
+            var cardnum=document.getElementById("txtCard").value;
+            var picture=document.getElementById("imgCard");
+            if(cardnum.startsWith("4455")){
+                picture.display="block"
+                picture.src='https://logos-world.net/wp-content/uploads/2020/09/MasterCard-Logo-1979-1990.png'
+            }
+            else{
+                picture.display="block"
+                picture.src="https://logos-world.net/wp-content/uploads/2020/04/Visa-Logo-1992-2000.png";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Username</dt>
+        <dd><input type="text" id="txtName" onblur="verifyName()"></dd>
+        <dd id="lblName"></dd>
+        <dt>Email</dt>
+        <dd><input type="text" id="txtEmail" onblur="verifyEmail()"></dd>
+        <dd id="lblEmail"></dd>
+        <dt>Credit Card Number</dt>
+        <dd style="width: 230px;"><input type="text" id="txtCard" onblur="verifyCard()"><img width="30px" height="30px" id="imgCard"></dd>
+    </dl>
+</body>
+</html>

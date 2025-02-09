@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color: black;
+            text-align: center;
+            padding: 10px;
+        }
+       img{
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+        .card{
+            width: 300px;
+            height: 250px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            text-align: center;
+            box-shadow: 2px 2px 2px black;
+        }
+        
+        main
+        {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .card-header{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .card-body span{
+            display: block;
+            margin-bottom: 10px;
+
+        }
+        button{
+            background: #000;
+            width: 80%;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .card:target {
+            transition: 5s;
+            background-color: yellow;
+            color:black;
+            border-radius: 200px;
+            width: 350px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#spb"><img src="../public/images/sp balasubbu.jpg" alt="" width="100px" height="100px"></a>
+        <a href="#arr"><img src="../public/images/ar rahman.jpg" alt="" width="100px" height="100px"></a>
+        <a href="#preetham"><img src="../public/images/preetham.jpg" alt="" width="100px" height="100px"></a>
+    </nav>
+    <main>
+        <div class="card" id="spb">
+            <div class="card-header">
+                <h4>SP Balu Playlist</h4>
+            </div>
+            <div class="card-body">
+                <span>Song-1</span>
+                <span>Song-2</span>
+                <span>Song-3</span>
+            </div>
+            <div class="card-footer">
+                <button>Play All</button>
+            </div>
+            
+        </div>
+        <div class="card" id="arr">
+            <div class="card-header">
+                <h4>A.R Rehman Playlist</h4>
+            </div>
+            <div class="card-body">
+                <span>Song-1</span>
+                <span>Song-2</span>
+                <span>Song-3</span>
+            </div>
+            <div class="card-footer">
+                <button>Play All</button>
+            </div>
+            
+        </div>
+        <div class="card" id="preetham">
+            <div class="card-header">
+                <h4>Preetham Playlist</h4>
+            </div>
+            <div class="card-body">
+                <span>Song-1</span>
+                <span>Song-2</span>
+                <span>Song-3</span>
+            </div>
+            <div class="card-footer">
+                <button>Play All</button>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenerateCode</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function generateCode()
+        {
+            var a= Math.round(Math.random()*10);
+            var b= Math.round(Math.random()*10);
+            var c= Math.round(Math.random()*10);
+            var d= Math.round(Math.random()*10);
+            document.getElementById('lblCode').innerHTML=`${a}  ${b}  ${c}  ${d}`
+        }
+    </script>
+</head>
+<body onload="generateCode()" class="container-fluid">
+    <dl>
+        <h4>User Login</h4>
+        <dt>Username</dt>
+        <dd> <input type="text" ></dd>
+        <dt>Password</dt>
+        <dd><input type="password"></dd>
+        <dt>Verify Code <button onclick="generateCode()" class="bi bi-arrow-clockwise"></button></dt>
+        <dd id="lblCode"></dd>
+        <button class="btn btn-primary">Login</button>
+    </dl>
+</body>
+</html>

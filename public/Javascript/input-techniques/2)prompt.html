@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            result = prompt("Enter Search String");
+            if(result==null) {
+                alert("You canceled..");
+            }
+            else if(result=='') {
+                alert("Please enter search string\nIt can't be empty");
+            } else {
+                document.getElementById("msg").innerHTML = result;
+            }
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h2> Searching For : <span id="msg"></span> </h2>
+</body>
+</html>
